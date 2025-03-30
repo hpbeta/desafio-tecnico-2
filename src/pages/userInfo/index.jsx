@@ -1,10 +1,15 @@
-import { Container, ContainerFollowers, ContainerInfo, Main, MessageError } from "./styles";
+import {
+  Container,
+  ContainerFollowers,
+  ContainerInfo,
+  Main,
+  MessageError,
+} from "./styles";
 
-
-export function UserInfo({userInfo, error}) {
-    return (
-        <Main>
-            {Object.keys(userInfo).length > 0 && (
+export function UserInfo({ userInfo, error }) {
+  return (
+    <Main>
+      {Object.keys(userInfo).length > 0 && (
         <Container>
           {
             <ContainerInfo>
@@ -21,6 +26,6 @@ export function UserInfo({userInfo, error}) {
         </Container>
       )}
       {error && <MessageError>{error}</MessageError>}
-        </Main>
-    )
+    </Main>
+  );
 }
