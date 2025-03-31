@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
 export const GlobalStyles = createGlobalStyle`
     * {
         margin: 0;
@@ -11,4 +10,4 @@ export const GlobalStyles = createGlobalStyle`
         background-color: #000000;
         font-family: "Nunito Sans", sans-serif;
     }
-`
+`;

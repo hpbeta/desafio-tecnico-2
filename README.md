@@ -9,6 +9,8 @@ O projeto foi desenvolvido com as seguintes tecnologias:
 - **CSS3** - Estilização com Styled-Components
 - **JavaScript (ES6+)** - Funcionalidades dinâmicas
 - **React.js** - Biblioteca para construção da interface
+- **React Router Dom** - Navegação entre diferentes páginas sem recarregar a página inteira
+
 - **Styled-Components** - Estilização com componentes dinâmicos
 
 
