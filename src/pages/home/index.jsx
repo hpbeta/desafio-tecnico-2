@@ -7,9 +7,9 @@ import iconSearch from "../../assets/icon-search.png";
 import {
   Button,
   Cabecalho,
-  Container,
+  ContainerMain,
   Img,
-  ContainerInfo,
+  Container,
   ContainerInput,
   Main,
   MessageError,
@@ -17,7 +17,8 @@ import {
   Name,
   Bio,
   IconExternal,
-  ContainerLinkExternal
+  ContainerLinkExternal,
+  ContainerInfo
 } from "./styles";
 import api from "../../services/api.js";
 import { Link } from "react-router-dom";
@@ -88,30 +89,26 @@ export function Home() {
       ) : (
         Object.keys(userInfo).length > 0 && (
          
-           <Container>
+           <ContainerMain>
        
-       <ContainerInfo>
+       <Container>
         
         <Img src={userInfo.avatar_url} alt="" />
-        <div>
+        <ContainerInfo>
          <Name>{userInfo.name}</Name>
          <Bio>{userInfo.bio}</Bio>
-         {/* <ContainerFollowers>
-           <p>Followers: {userInfo.followers}</p>
-           <p>Following: {userInfo.following}</p>
-         </ContainerFollowers> */}
          <Link to={`/repositories/${userInfo.login}/repos`}>
          <Button>Ver repositórios</Button>
        </Link>
-        </div>
+        </ContainerInfo>
         <ContainerLinkExternal>
       <a href={userInfo.html_url} target="_blank">
           <IconExternal />
         </a>
       </ContainerLinkExternal>
-       </ContainerInfo>
+       </Container>
        
-     </Container>
+     </ContainerMain>
      
          
         )

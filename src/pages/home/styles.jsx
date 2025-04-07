@@ -59,7 +59,7 @@ export const ContainerInput = styled.div`
   }
 `;
 
-export const Container = styled.div`
+export const ContainerMain = styled.div`
   margin-top: 20px;
   border-radius: 5px;
   padding: 30px 0;
@@ -69,7 +69,8 @@ export const Container = styled.div`
   width: 100%;
   max-width: 804px;
   position: relative;
-  
+
+
 `;
 
 export const ContainerLinkExternal = styled.div`
@@ -84,11 +85,24 @@ export const IconExternal = styled(HiOutlineExternalLink)`
   font-size: 23px;
 `
 
-export const ContainerInfo = styled.div`
+export const Container = styled.div`
   display: flex;
   gap: 40px;
-  
+  @media (max-width: 493px) {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+   gap: 0;
+ }
+
 `;
+
+export const ContainerInfo = styled.div`
+   @media (max-width: 493px) {
+    text-align: center;
+    margin-left: 32px;
+ }
+`
 
 export const Img = styled.img`
  
