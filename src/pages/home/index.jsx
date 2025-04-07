@@ -1,16 +1,23 @@
 import { useState } from "react";
 import logo from "../../assets/logo-github.png";
 import iconSearch from "../../assets/icon-search.png";
+
+
+
 import {
   Button,
   Cabecalho,
   Container,
-  ContainerFollowers,
+  Img,
   ContainerInfo,
   ContainerInput,
   Main,
   MessageError,
   Loading,
+  Name,
+  Bio,
+  IconExternal,
+  ContainerLinkExternal
 } from "./styles";
 import api from "../../services/api.js";
 import { Link } from "react-router-dom";
@@ -31,6 +38,8 @@ export function Home() {
 
     try {
       const response = await api.get(`/${userName}`);
+      console.log(response);
+      
       setUserInfo(response.data);
       setUserName("");
       setLoading(false);
@@ -78,20 +87,33 @@ export function Home() {
         <Loading>Carregando...</Loading>
       ) : (
         Object.keys(userInfo).length > 0 && (
-          <Container>
-            <ContainerInfo>
-              <img src={userInfo.avatar_url} alt="" />
-              <p>{userInfo.name}</p>
-              <p>{userInfo.bio}</p>
-              <ContainerFollowers>
-                <p>Followers: {userInfo.followers}</p>
-                <p>Following: {userInfo.following}</p>
-              </ContainerFollowers>
-            </ContainerInfo>
-            <Link to={`/repositories/${userInfo.login}/repos`}>
-              <Button>Ver repositórios</Button>
-            </Link>
-          </Container>
+         
+           <Container>
+       
+       <ContainerInfo>
+        
+        <Img src={userInfo.avatar_url} alt="" />
+        <div>
+         <Name>{userInfo.name}</Name>
+         <Bio>{userInfo.bio}</Bio>
+         {/* <ContainerFollowers>
+           <p>Followers: {userInfo.followers}</p>
+           <p>Following: {userInfo.following}</p>
+         </ContainerFollowers> */}
+         <Link to={`/repositories/${userInfo.login}/repos`}>
+         <Button>Ver repositórios</Button>
+       </Link>
+        </div>
+        <ContainerLinkExternal>
+      <a href={userInfo.html_url} target="_blank">
+          <IconExternal />
+        </a>
+      </ContainerLinkExternal>
+       </ContainerInfo>
+       
+     </Container>
+     
+         
         )
       )}
 

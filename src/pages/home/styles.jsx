@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { HiOutlineExternalLink } from "react-icons/hi";
 
 export const Main = styled.main`
   display: flex;
@@ -7,6 +8,7 @@ export const Main = styled.main`
   margin-top: 39px;
   gap: 30px;
   color: #ffffff;
+  padding: 0 20px;
 `;
 
 export const Cabecalho = styled.header`
@@ -58,36 +60,63 @@ export const ContainerInput = styled.div`
 `;
 
 export const Container = styled.div`
-  text-align: center;
   margin-top: 20px;
-  border: 1px solid #808080;
   border-radius: 5px;
-  padding: 20px 0;
-  width: 350px;
-  color: #ffffff;
+  padding: 30px 0;
+  color: #000000;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 804px;
+  position: relative;
+  
 `;
+
+export const ContainerLinkExternal = styled.div`
+  position: absolute;
+  top: 20px;
+  right: 30px;
+`
+
+export const IconExternal = styled(HiOutlineExternalLink)`
+
+  color: #005CFF;
+  font-size: 23px;
+`
 
 export const ContainerInfo = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
+  gap: 40px;
+  
+`;
 
-  img {
+export const Img = styled.img`
+ 
     border-radius: 50%;
-    width: 120px;
-  }
+    border: 2px solid #005CFF;
+    width: 220px;
+    margin-left: 33px;
+  
+`
 
-  p {
-  }
-`;
+export const Name = styled.p`
+  margin: 68px 0 16px 0;
+  color: #005CFF;
+  font-weight: bold;
+`
 
-export const ContainerFollowers = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-`;
+export const Bio = styled.p`
+  font-size: 15px;
+  max-width: 448px;
+  line-height: 25px;
+`
+
+// export const ContainerFollowers = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 20px;
+// `;
 
 export const Button = styled.button`
   padding: 10px;
@@ -96,9 +125,9 @@ export const Button = styled.button`
   border: none;
   color: #ffffff;
   font-weight: bold;
-  margin-top: 15px;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 20px;
 
   &:hover {
     opacity: 0.9;
