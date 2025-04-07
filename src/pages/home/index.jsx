@@ -2,8 +2,6 @@ import { useState } from "react";
 import logo from "../../assets/logo-github.png";
 import iconSearch from "../../assets/icon-search.png";
 
-
-
 import {
   Button,
   Cabecalho,
@@ -18,7 +16,7 @@ import {
   Bio,
   IconExternal,
   ContainerLinkExternal,
-  ContainerInfo
+  ContainerInfo,
 } from "./styles";
 import api from "../../services/api.js";
 import { Link } from "react-router-dom";
@@ -40,7 +38,7 @@ export function Home() {
     try {
       const response = await api.get(`/${userName}`);
       console.log(response);
-      
+
       setUserInfo(response.data);
       setUserName("");
       setLoading(false);
@@ -88,29 +86,23 @@ export function Home() {
         <Loading>Carregando...</Loading>
       ) : (
         Object.keys(userInfo).length > 0 && (
-         
-           <ContainerMain>
-       
-       <Container>
-        
-        <Img src={userInfo.avatar_url} alt="" />
-        <ContainerInfo>
-         <Name>{userInfo.name}</Name>
-         <Bio>{userInfo.bio}</Bio>
-         <Link to={`/repositories/${userInfo.login}/repos`}>
-         <Button>Ver repositórios</Button>
-       </Link>
-        </ContainerInfo>
-        <ContainerLinkExternal>
-      <a href={userInfo.html_url} target="_blank">
-          <IconExternal />
-        </a>
-      </ContainerLinkExternal>
-       </Container>
-       
-     </ContainerMain>
-     
-         
+          <ContainerMain>
+            <Container>
+              <Img src={userInfo.avatar_url} alt="" />
+              <ContainerInfo>
+                <Name>{userInfo.name}</Name>
+                <Bio>{userInfo.bio}</Bio>
+                <Link to={`/repositories/${userInfo.login}/repos`}>
+                  <Button>Ver repositórios</Button>
+                </Link>
+              </ContainerInfo>
+              <ContainerLinkExternal>
+                <a href={userInfo.html_url} target="_blank">
+                  <IconExternal />
+                </a>
+              </ContainerLinkExternal>
+            </Container>
+          </ContainerMain>
         )
       )}
 

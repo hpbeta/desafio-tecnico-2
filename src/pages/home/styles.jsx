@@ -64,73 +64,60 @@ export const ContainerMain = styled.div`
   border-radius: 5px;
   padding: 30px 0;
   color: #000000;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 20px;
   width: 100%;
   max-width: 804px;
   position: relative;
-
-
 `;
 
 export const ContainerLinkExternal = styled.div`
   position: absolute;
   top: 20px;
   right: 30px;
-`
+`;
 
 export const IconExternal = styled(HiOutlineExternalLink)`
-
-  color: #005CFF;
+  color: #005cff;
   font-size: 23px;
-`
+`;
 
 export const Container = styled.div`
   display: flex;
   gap: 40px;
   @media (max-width: 493px) {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     align-items: center;
-   gap: 0;
- }
-
+    gap: 0;
+  }
 `;
 
 export const ContainerInfo = styled.div`
-   @media (max-width: 493px) {
+  @media (max-width: 493px) {
     text-align: center;
     margin-left: 32px;
- }
-`
+  }
+`;
 
 export const Img = styled.img`
- 
-    border-radius: 50%;
-    border: 2px solid #005CFF;
-    width: 220px;
-    margin-left: 33px;
-  
-`
+  border-radius: 50%;
+  border: 2px solid #005cff;
+  width: 220px;
+  margin-left: 33px;
+`;
 
 export const Name = styled.p`
   margin: 68px 0 16px 0;
-  color: #005CFF;
+  color: #005cff;
   font-weight: bold;
-`
+`;
 
 export const Bio = styled.p`
   font-size: 15px;
   max-width: 448px;
   line-height: 25px;
-`
-
-// export const ContainerFollowers = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   gap: 20px;
-// `;
+`;
 
 export const Button = styled.button`
   padding: 10px;
