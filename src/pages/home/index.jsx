@@ -26,7 +26,8 @@ export function Home() {
   const [userInfo, setUserInfo] = useState({});
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const [ titleGitHub, setTitleGitHub ] = useState("Perfil")
+  
   async function getUserGithub(userName) {
     if (!userName) {
       setError("Digite um nome de usuário");
@@ -37,18 +38,19 @@ export function Home() {
 
     try {
       const response = await api.get(`/${userName}`);
-      console.log(response);
 
       setUserInfo(response.data);
       setUserName("");
       setLoading(false);
       setError("");
+      setTitleGitHub("Perfil GitHub")
     } catch (error) {
       setError(
         "Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente"
       );
       setLoading(false);
       console.log("Erro ao buscar o usuário", error);
+      setTitleGitHub("Perfil GitHub")
     }
   }
 
@@ -65,7 +67,7 @@ export function Home() {
       <Cabecalho>
         <img src={logo} alt="Logo Github" />
         <h5>
-          Perfil <span>GitHub</span>
+          {titleGitHub}
         </h5>
       </Cabecalho>
       <ContainerInput>
