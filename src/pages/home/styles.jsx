@@ -42,6 +42,10 @@ export const ContainerInput = styled.div`
     border-radius: 5px;
     width: 453px;
     outline: none;
+    
+    &::placeholder {
+      color: #000000;
+    }
   }
 
   img {
@@ -64,7 +68,7 @@ export const ContainerMain = styled.div`
   border-radius: 5px;
   padding: 30px 0;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #d9d9d9;
   border-radius: 20px;
   width: 100%;
   max-width: 804px;
@@ -136,7 +140,7 @@ export const Button = styled.button`
 `;
 
 export const MessageError = styled.span`
-  background-color: #ffffff;
+  background-color: #d9d9d9;
   color: #f50404;
   padding: 20px;
   width: 500px;

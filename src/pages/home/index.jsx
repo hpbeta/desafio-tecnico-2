@@ -51,6 +51,7 @@ export function Home() {
       setLoading(false);
       console.log("Erro ao buscar o usuário", error);
       setTitleGitHub("Perfil GitHub")
+      setUserName("");
     }
   }
 
