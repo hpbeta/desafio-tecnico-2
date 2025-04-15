@@ -206,7 +206,7 @@ export const MessageError = styled.span`
   background-color: #d9d9d9;
   color: #f50404;
   padding: 20px;
-  width: 500px;
+  max-width: 500px;
   text-align: center;
   border-radius: 5px;
   margin-top: 20px;
