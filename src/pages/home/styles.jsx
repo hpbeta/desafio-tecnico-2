@@ -47,7 +47,7 @@ export const Main = styled.main`
     max-width: 100%;
     padding: 20px;
     height: auto;
-    margin: 20px auto;
+    margin-top: 150px;
     min-height: 400px;
   }
 
@@ -55,7 +55,7 @@ export const Main = styled.main`
     max-width: 100%;
     padding: 15px;
     height: auto;
-    margin: 10px auto;
+    margin-top: 150px;
     min-height: 350px;
   }
 `;

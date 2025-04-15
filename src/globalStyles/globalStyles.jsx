@@ -16,5 +16,9 @@ export const GlobalStyles = createGlobalStyle`
         background-repeat: no-repeat; 
         background-position: 100px 70px; 
         height: 100vh; 
+
+        @media (max-width: 608px) {
+            background-position: -20px 80px; 
+  }
     }
 `;
