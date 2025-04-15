@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
         background-image: url(${camada});
         background-size: 149px 139px;
         background-repeat: no-repeat; 
-        background-position: 100px 70px; 
+        background-position: 190px 70px; 
         height: 100vh; 
 
         @media (max-width: 608px) {
