@@ -7,6 +7,12 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+
+    html, body {
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+    }
     body {
         background-color: #1f1f1f;
         font-family: "Nunito Sans", sans-serif;
