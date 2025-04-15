@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { GlobalStyles } from "./globalStyles/globalStyles";
 import { Router } from "./routes/routes";
 

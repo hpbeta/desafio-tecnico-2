@@ -1,6 +1,32 @@
 import styled from "styled-components";
 import { HiOutlineExternalLink } from "react-icons/hi";
 
+export const SphereLeft = styled.div`
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #005cff 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(80px);
+  top: 410px;
+  left: -195px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+`;
+
+export const SphereRight = styled.div`
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #005cff 0%, rgba(0, 0, 0, 0) 70%);
+  filter: blur(80px);
+  top: 10px;
+  right: 0;
+  transform: translate(50%, -50%);
+  z-index: -1;
+`;
+
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
@@ -9,13 +35,36 @@ export const Main = styled.main`
   gap: 30px;
   color: #ffffff;
   padding: 0 20px;
+  background-color: #000000;
+  padding: 39px 0;
+  max-width: 1156px;
+  height: 537px;
+  margin: 137px auto;
+  position: relative;
+  z-index: 10px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 20px;
+    height: auto;
+    margin: 20px auto;
+    min-height: 400px;
+  }
+
+  @media (max-width: 493px) {
+    max-width: 100%;
+    padding: 15px;
+    height: auto;
+    margin: 10px auto;
+    min-height: 350px;
+  }
 `;
 
 export const Cabecalho = styled.header`
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 27px;
+  margin-bottom: 10px;
 
   h5 {
     font-size: 60px;
@@ -42,7 +91,7 @@ export const ContainerInput = styled.div`
     border-radius: 5px;
     width: 453px;
     outline: none;
-    
+
     &::placeholder {
       color: #000000;
     }
@@ -64,7 +113,6 @@ export const ContainerInput = styled.div`
 `;
 
 export const ContainerMain = styled.div`
-  margin-top: 20px;
   border-radius: 5px;
   padding: 30px 0;
   color: #000000;
@@ -72,7 +120,20 @@ export const ContainerMain = styled.div`
   border-radius: 20px;
   width: 100%;
   max-width: 804px;
+  height: 257px;
   position: relative;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    padding: 20px 0;
+    height: auto;
+  }
+
+  @media (max-width: 493px) {
+    max-width: 100%;
+    padding: 15px 0;
+    height: auto;
+  }
 `;
 
 export const ContainerLinkExternal = styled.div`
@@ -89,6 +150,7 @@ export const IconExternal = styled(HiOutlineExternalLink)`
 export const Container = styled.div`
   display: flex;
   gap: 40px;
+  margin-top: -10px;
   @media (max-width: 493px) {
     display: flex;
     flex-direction: column;
@@ -101,6 +163,7 @@ export const ContainerInfo = styled.div`
   @media (max-width: 493px) {
     text-align: center;
     margin-left: 32px;
+    margin-top: -40px;
   }
 `;
 
